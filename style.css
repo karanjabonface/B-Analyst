@@ -1,0 +1,321 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden; /* Contains floats */
+    max-width: 1200px;
+}
+
+/* Header & Navigation */
+header {
+    background: #5f5151f3;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 75px;
+    align-items: center;
+    border-bottom: #0779e4 3px solid;
+}
+
+header h1 {
+    float: centre;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header a:hover, header a.active {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    min-height: 400px;
+    background: url('images/hero-background.jpg') no-repeat center center/cover; /* Add a background image */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    background-color: #555; /* Fallback color */
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #07e47d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #3204a7;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px 0;
+    background-color: #fff;
+    margin-top: 20px; /* Add space below header */
+    margin-bottom: 20px;
+     min-height: 60vh; /* Ensure main content pushes footer down */
+}
+
+main h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+main h3 {
+    color: #0779e4;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Home Page Highlights */
+.highlights {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.highlight-item {
+    flex-basis: calc(33% - 20px); /* Adjust for spacing, approx 3 items per row */
+    margin-bottom: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.highlight-item img.highlight-img {
+    max-width: 100%;
+    height: 180px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, might crop */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.highlight-item a {
+    color: #2807e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+.highlight-item a:hover {
+     text-decoration: underline;
+}
+
+
+/* Room Types Page */
+.room-type {
+    background: lightsalmon;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.room-img {
+    max-width: 250px; /* Limit image size */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+    margin-bottom: 10px; /* Space below image if text wraps */
+    border-radius: 5px;
+}
+
+.room-type h3 {
+    margin-top: 0; /* Remove default top margin */
+    width: 100%; /* Make sure heading takes full width initially */
+    flex-basis: 100%; /* Ensure heading is above description/list if wrapped */
+}
+
+.room-type p, .room-type ul {
+    flex: 1; /* Allow text content to take remaining space */
+    min-width: 200px; /* Minimum width before wrapping */
+}
+
+.room-type ul {
+    list-style: disc;
+    margin-left: 20px; /* Indent list */
+}
+
+
+/* Services Page */
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    background: lightsalmon;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex; /* Align image and text */
+    align-items: center; /* Vertically center items */
+}
+
+.services-list img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* Booking & Contact Forms */
+form {
+    background: lightblue;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Contact Page Specific */
+.contact-info {
+    margin-bottom: 30px;
+}
+.contact-info p {
+    margin-bottom: 5px;
+}
+.contact-info ul {
+     margin-left: 20px;
+     margin-top: 10px;
+}
+
+
+/* Footer */
+footer {
+    background: #333333b2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px; /* Push footer down */
+}
+
+/* Responsive Adjustments (Example) */
+@media (max-width: 768px) {
+    header h1, header nav, header li {
+        float: none;
+        text-align: center;
+        width: 100%;
+        padding: centre;
+    }
+     header nav ul {
+        margin-top: 10px;
+    }
+     header li {
+        display: block; /* Stack nav items vertically */
+        padding: 10px 0;
+    }
+
+    .highlights {
+         flex-direction: column; /* Stack highlights vertically */
+         align-items: center; /* Center items */
+    }
+    .highlight-item {
+        flex-basis: 80%; /* Take more width */
+        max-width: 400px; /* Limit max width */
+    }
+
+     .room-type {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center items */
+    }
+     .room-img {
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+
+     .services-list li {
+         flex-direction: column; /* Stack image and text */
+         align-items: flex-start; /* Align text left */
+    }
+     .services-list img {
+         margin-bottom: 10px;
+    }
+}

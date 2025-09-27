@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Starehe Resort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Starehe Resort</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="rooms.html">Room Types</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Book Your Stay</h2>
+        <p>Fill in the form below to request your booking. We will contact you to confirm availability and details.</p>
+
+        <form id="bookingForm" action="#" method="post"> <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="customer_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="customer_email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Select Vacation Area:</label>
+                <select id="location" name="vacation_area" required>
+                    <option value="" disabled selected>-- Choose Location --</option>
+                    <option value="maasai_mara">Maasai Mara</option>
+                    <option value="diani">Diani Beach</option>
+                    <option value="naivasha">Naivasha</option>
+                    <option value="malindi">Malindi</option>
+                     <option value="nanyuki">Nanyuki</option>
+                    <option value="nairobi">Nairobi</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label for="room_type">Select Room Type:</label>
+                <select id="room_type" name="room_type" required>
+                    <option value="" disabled selected>-- Choose Room Type --</option>
+                    <option value="standard_single">Standard Single</option>
+                    <option value="standard_double">Standard Double/Twin</option>
+                    <option value="deluxe_double">Deluxe Double/Twin</option>
+                    <option value="family_suite">Family Suite</option>
+                    <option value="presidential_suite">Presidential/Executive Suite</option>
+                     </select>
+            </div>
+
+            <div class="form-group">
+                 <label for="requests">Special Requests (Optional):</label>
+                 <textarea id="requests" name="special_requests" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Send Booking Request</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Starehe Resort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>
